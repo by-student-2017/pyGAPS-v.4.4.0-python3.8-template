@@ -1,7 +1,7 @@
 # pyGAPS-v.4.4.0-python3.8-template
 
 
-## tested with Ubumtu 20.04 LTS (on Windows 10).
+## tested with Ubumtu 20.04 LTS or Ubumtu 22.04 LTS (on Windows 10).
 
 
 ## Install (New)
@@ -48,12 +48,16 @@
 4. (write your data on *.csv file in sequential_data directory, please.)
 
 
-## Ubuntu 20.04 LTS (WSL version case)
+## Ubuntu 20.04 LTS or Ubuntu 22.04 LTS (WSL version case)
 1. sudo apt install x11-apps
 2. echo 'export DISPLAY=localhost:0.0' >> ~/.bashrc
 3. source ~/.bashrc
 4. sudo apt -y install python3-tk
 5. (plase install XLaunch)
+
+
+## Arial font
+- sudo apt -y install ttf-mscorefonts-installer
 
 
 ## case.csv (input condition and data) [P/P0 vs. cm^3 (STP)]
