@@ -56,6 +56,10 @@
 5. (plase install XLaunch)
 
 
+# UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+	sudo apt -y install python3-tk tk-dev
+
+
 ## case.csv (input condition and data) [P/P0 vs. cm^3 (STP)]
 	iso_type,Isotherme
 	is_real,true
