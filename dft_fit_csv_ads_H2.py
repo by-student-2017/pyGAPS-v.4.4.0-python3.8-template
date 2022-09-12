@@ -12,8 +12,8 @@ isotherm = pgp.isotherm_from_csv(path)
 # fitting on DFT kernel
 result_dict_dft = pgc.psd_dft(
     isotherm,
-    kernel='DFT-N2-77K-carbon-slit',
-    #kernel='./NLDFT-H2-77K-carbon-slit_2006.csv'
+    #kernel='DFT-N2-77K-carbon-slit',
+    kernel='./NLDFT-H2-77K-carbon-slit_2006.csv',
     #branch='des',
     #bspline_order=5,
     verbose=True)
@@ -30,13 +30,13 @@ fig2.savefig('./plot/NLDFT_ADS.jpg')
 
 import pandas as pd
 # method 1
-d2={}
-for k,v in result_dict_dft.items():
-    d2[k]=pd.Series(v)
-df = pd.DataFrame(d2)
+#d2={}
+#for k,v in result_dict_dft.items():
+#    d2[k]=pd.Series(v)
+#df = pd.DataFrame(d2)
 #
 # method 2
-#df = pd.DataFrame.from_dict(result_dict_dft, orient='index').T
+df = pd.DataFrame.from_dict(result_dict_dft, orient='index').T
 #
 # method 3
 #d = result_dict_dft
@@ -86,7 +86,7 @@ print("specific surface area and volume")
 print("ultra-micropore: %7.2f [m2/g], %7.2f [cm3/g] (w < 0.7 nm)" % (ultramicropore_s, ultramicropore_v))
 print("super-micropore: %7.2f [m2/g], %7.2f [cm3/g] (0.7 =< w < 2.0 nm)" % (supermicropore_s, supermicropore_v))
 print("mesopore:        %7.2f [m2/g], %7.2f [cm3/g] Attention!!! limited range (2-10 nm)" % (mesopore_s, mesopore_v))
-print("total ds, V:     %7.2f [m2/g], %7.2f [cm3/g] Attention!!! limited range (0.4 =< w =< 10 nm)" % (ndfds[ndata-1,6], ndfds[ndata-1,2]))
+print("total ds, V:     %7.2f [m2/g], %7.2f [cm3/g] Attention!!! limited range (0.3 =< w =< 10 nm)" % (ndfds[ndata-1,6], ndfds[ndata-1,2]))
 print("***************************************************************************************************")
 print("Note")
 print("The BET method underestimates the specific surface area of ultra-micropore region.")
@@ -102,7 +102,7 @@ text += "specific surface area and volume\n"
 text += "ultra-micropore: "+"{:.2f}".format(ultramicropore_s)+" [m2/g], "+"{:.2f}".format(ultramicropore_v)+" [cm3/g] (w < 0.7 nm) \n"
 text += "super-micropore: "+"{:.2f}".format(supermicropore_s)+" [m2/g], "+"{:.2f}".format(supermicropore_v)+" [cm3/g] (0.7 =< w < 2.0 nm) \n"
 text += "mesopore:       "+"{:.2f}".format(mesopore_s)+" [m2/g], "+"{:.2f}".format(mesopore_v)+" [cm3/g] Attention!!! limited range (2-10 nm) \n"
-text += "total ds, V:    "+"{:.2f}".format(ndfds[ndata-1,6])+" [m2/g], "+"{:.2f}".format(ndfds[ndata-1,2])+" [cm3/g] Attention!!! limited range (0.4 =< w =< 10 nm) \n"
+text += "total ds, V:    "+"{:.2f}".format(ndfds[ndata-1,6])+" [m2/g], "+"{:.2f}".format(ndfds[ndata-1,2])+" [cm3/g] Attention!!! limited range (0.3 =< w =< 10 nm) \n"
 text += "************************************************\n"
 text += "Note \n"
 text += "The BET method underestimates the specific surface area of ultra-micropore region. \n"

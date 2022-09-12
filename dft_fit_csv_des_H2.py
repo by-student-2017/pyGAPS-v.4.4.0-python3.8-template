@@ -12,36 +12,36 @@ isotherm = pgp.isotherm_from_csv(path)
 # fitting on DFT kernel
 result_dict_dft = pgc.psd_dft(
     isotherm,
-    kernel='DFT-N2-77K-carbon-slit',
-    #kernel='./NLDFT-H2-77K-carbon-slit_2006.csv'
-    #branch='des',
+    #kernel='DFT-N2-77K-carbon-slit',
+    kernel='./NLDFT-H2-77K-carbon-slit_2006.csv',
+    branch='des',
     #bspline_order=5,
     verbose=True)
 
 # plot
 fig1 = plt.figure(1)
-fig1.savefig('./plot/NLDFT_ADS_Fit.jpg')
+fig1.savefig('./plot/NLDFT_DES_Fit.jpg')
 fig2 = plt.figure(2)
-fig2.savefig('./plot/NLDFT_ADS.jpg')
+fig2.savefig('./plot/NLDFT_DES.jpg')
 #plt.show()
 
-#import pprint
-#pprint.pprint(result_dict_dft)
+# import pprint
+# pprint.pprint(result_dict_dft)
 
 import pandas as pd
 # method 1
-d2={}
-for k,v in result_dict_dft.items():
-    d2[k]=pd.Series(v)
-df = pd.DataFrame(d2)
+#d2={}
+#for k,v in result_dict_dft.items():
+#    d2[k]=pd.Series(v)
+#df = pd.DataFrame(d2)
 #
 # method 2
-#df = pd.DataFrame.from_dict(result_dict_dft, orient='index').T
+df = pd.DataFrame.from_dict(result_dict_dft, orient='index').T
 #
 # method 3
 #d = result_dict_dft
 #df = pd.DataFrame(d.values(), index=d.keys()).T
-#df.to_csv("result_dft_ads.csv", index=False)
+#df.to_csv("result_dft_des.csv", index=False)
 
 # set init of ds
 dfds = df.assign(ds=0.0e0, tds=0.0e0)
@@ -86,7 +86,7 @@ print("specific surface area and volume")
 print("ultra-micropore: %7.2f [m2/g], %7.2f [cm3/g] (w < 0.7 nm)" % (ultramicropore_s, ultramicropore_v))
 print("super-micropore: %7.2f [m2/g], %7.2f [cm3/g] (0.7 =< w < 2.0 nm)" % (supermicropore_s, supermicropore_v))
 print("mesopore:        %7.2f [m2/g], %7.2f [cm3/g] Attention!!! limited range (2-10 nm)" % (mesopore_s, mesopore_v))
-print("total ds, V:     %7.2f [m2/g], %7.2f [cm3/g] Attention!!! limited range (0.4 =< w =< 10 nm)" % (ndfds[ndata-1,6], ndfds[ndata-1,2]))
+print("total ds, V:     %7.2f [m2/g], %7.2f [cm3/g] Attention!!! limited range (0.3 =< w =< 10 nm)" % (ndfds[ndata-1,6], ndfds[ndata-1,2]))
 print("***************************************************************************************************")
 print("Note")
 print("The BET method underestimates the specific surface area of ultra-micropore region.")
@@ -102,7 +102,7 @@ text += "specific surface area and volume\n"
 text += "ultra-micropore: "+"{:.2f}".format(ultramicropore_s)+" [m2/g], "+"{:.2f}".format(ultramicropore_v)+" [cm3/g] (w < 0.7 nm) \n"
 text += "super-micropore: "+"{:.2f}".format(supermicropore_s)+" [m2/g], "+"{:.2f}".format(supermicropore_v)+" [cm3/g] (0.7 =< w < 2.0 nm) \n"
 text += "mesopore:       "+"{:.2f}".format(mesopore_s)+" [m2/g], "+"{:.2f}".format(mesopore_v)+" [cm3/g] Attention!!! limited range (2-10 nm) \n"
-text += "total ds, V:    "+"{:.2f}".format(ndfds[ndata-1,6])+" [m2/g], "+"{:.2f}".format(ndfds[ndata-1,2])+" [cm3/g] Attention!!! limited range (0.4 =< w =< 10 nm) \n"
+text += "total ds, V:    "+"{:.2f}".format(ndfds[ndata-1,6])+" [m2/g], "+"{:.2f}".format(ndfds[ndata-1,2])+" [cm3/g] Attention!!! limited range (0.3 =< w =< 10 nm) \n"
 text += "************************************************\n"
 text += "Note \n"
 text += "The BET method underestimates the specific surface area of ultra-micropore region. \n"
@@ -110,7 +110,7 @@ text += "The BET method overestimates the specific surface area of super-micropo
 text += "Since the BET model assumes multi-layer adsorption, it holds only for pores larger than mesopores. In addition, the pore surface area tends to be overestimated because the interaction from the solid surface acting on the second and subsequent layers is ignored. \n"
 text += "total ds: "+"{:.2f}".format(ndfds[ndata-1,6]+supermicropore_s*0.5)+" [m2/g] (super-micropore*1.5) \n"
 text += "***************************************************************************************************\n"
-fileobj = open("./plot/info_ads.txt",'w')
+fileobj = open("./plot/info_des.txt",'w')
 fileobj.write(text)
 #
 x = ndfds[:,0]
@@ -147,8 +147,8 @@ h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
 ax1.legend(h1+h2, l1+l2, loc='center right')
 #
-plt.title("PSD plot NLDFT (carbon slit), ADS", fontsize=18, fontname='DejaVu Serif')
-fig.savefig('./plot/NLDFT_deltaS_ADS.jpg')
+plt.title("PSD plot NLDFT (carbon slit), DES", fontsize=18, fontname='DejaVu Serif')
+fig.savefig('./plot/NLDFT_deltaS_DES.jpg')
 #plt.show()
 
 # set name of columns
@@ -158,4 +158,4 @@ ndf.columns = ['pore_widths_nm', 'pore_distribution', 'pore_volume_cumulative_cm
 # output window and excel file
 #import pprint
 #pprint.pprint(ndf)
-ndf.to_csv("./plot/result_dft_ads.csv", index=False)
+ndf.to_csv("./plot/result_dft_des.csv", index=False)
