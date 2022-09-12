@@ -4,7 +4,7 @@
 ## tested with Ubumtu 20.04 LTS or Ubumtu 22.04 LTS (on Windows 10).
 
 
-## Install (New)
+## Install
 1. cd ~
 2. sudo apt update
 3. sudo apt -y install python3-pip
