@@ -1,0 +1,46 @@
+material,CarbonBlack
+material_batch,Test
+temperature,77.355
+adsorbate,N2
+date,21/05/2010 00:00
+t_act,200.0
+user,PI
+lab,MADIREL
+machine,Triflex
+type,calorimetry
+project,ACRONYM
+iso_type,Isotherme
+is_real,true
+pressure_unit,kPa
+pressure_mode,relative
+loading_basis,molar
+loading_unit,cm3(STP)
+adsorbent_basis,mass
+adsorbent_unit,g
+data
+pressure,loading
+0.00300, 6.643208
+0.01001, 6.771155
+0.02202, 6.872226
+0.03203, 6.946961
+0.04304, 7.028118
+0.05805, 7.139940
+0.07907, 7.301005
+0.09509, 7.428097
+0.13413, 7.756236
+0.18118, 8.191452
+0.23223, 8.722015
+0.28428, 9.338442
+0.33633, 10.048434
+0.43643, 11.768809
+0.54054, 14.317839
+0.73573, 24.107044
+0.84284, 38.580158
+0.92392, 70.721365
+0.96896, 131.65552
+0.98098, 170.92828
+0.98398, 184.70242
+0.99599, 272.55792
+0.99799, 296.02583
+0.99899, 309.34345
+1.00000, 323.91578
