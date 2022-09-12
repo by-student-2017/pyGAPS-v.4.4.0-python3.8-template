@@ -57,7 +57,7 @@
 
 
 ## Arial font
-- sudo apt -y install ttf-mscorefonts-installer
+	sudo apt -y install ttf-mscorefonts-installer
 
 
 ## case.csv (input condition and data) [P/P0 vs. cm^3 (STP)]
