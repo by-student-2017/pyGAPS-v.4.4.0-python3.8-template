@@ -1,0 +1,40 @@
+#!/usr/bin/gnuplot
+
+#set key outside
+#set key top left
+set key bottom right
+#set nokey
+
+#set logscale x
+
+#set xrange[1e-9:1e0]
+#set xrange[1e-4:1e0]
+#set format x "10^{%L}"
+set xrange[0:1]
+
+set terminal win font "Arial,12"
+set xlabel "Pressure, atm"
+#set noxtics
+#set mxtics 5
+
+set ylabel "Amount adsorbed, g/100 g"
+#set mytics 5
+#set noytics
+set yrange[0:2.5]
+
+set title "Experimental H_2 77 K"
+
+plot "Maxsorb_H2_77K.txt"    u 1:2 w lp t "Maxsorb", \
+     "Norit_H2_77K.txt"       u 1:2 w lp t "Norit"  , \
+     "Carbosieve_H2_77K.txt" u 1:2 w lp t "Carbosieve"
+
+#pause -1
+
+#set terminal png transparent crop
+set terminal png
+set out "H2_Carbon.png"
+replot
+
+#set terminal postscript color enhanced lw 2
+#set out "mmol.ps"
+#replot
