@@ -105,7 +105,7 @@ plt.legend()
 plt.title('alpha-s plot')
 plt.show()
 
-plt.title("alpha-s-plot (LMA10 std., N2 77K, Albero), ads", fontsize=18, fontname='Arial')
+plt.title("alpha-s-plot (LMA10 std., N2 77K, Albero), ads", fontsize=18, fontname='DejaVu Serif')
 fig.savefig('./plot/alpha-s-plot_LMA10_N2_77K_Albero.jpg')
 
 print("***************************************************************************")

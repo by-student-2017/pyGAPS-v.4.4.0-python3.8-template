@@ -107,7 +107,7 @@ plt.legend()
 plt.title('alpha-s plot')
 plt.show()
 
-plt.title("alpha-s-plot (Cabot BP280 (NGCB std.), Ar 77K, Gardner), ads", fontsize=18, fontname='Arial')
+plt.title("alpha-s-plot (Cabot BP280 (NGCB std.), Ar 77K, Gardner), ads", fontsize=18, fontname='DejaVu Serif')
 fig.savefig('./plot/alpha-s-plot_NGCB_Cabot_BP280_Ar_77K_Gardner.jpg')
 
 print("***************************************************************************")

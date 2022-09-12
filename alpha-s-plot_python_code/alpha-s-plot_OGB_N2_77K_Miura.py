@@ -107,7 +107,7 @@ plt.legend()
 plt.title('alpha-s plot')
 plt.show()
 
-plt.title("alpha-s-plot (OGB std., N2 77K, Miura), ads", fontsize=18, fontname='Arial')
+plt.title("alpha-s-plot (OGB std., N2 77K, Miura), ads", fontsize=18, fontname='DejaVu Serif')
 fig.savefig('./plot/alpha-s-plot_OGB_N2_77K_Miura.jpg')
 
 print("***************************************************************************")

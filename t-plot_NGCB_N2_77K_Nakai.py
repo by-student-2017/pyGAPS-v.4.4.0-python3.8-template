@@ -229,7 +229,7 @@ print("*************************************************************************
 
 
 # ********** output graph (jpg) **********
-plt.title("t-plot, ads", fontsize=18, fontname='Arial')
+plt.title("t-plot, ads", fontsize=18, fontname='DejaVu Serif')
 fig.savefig('./plot/t-plot_NGCB.jpg')
 # ***************************************
 

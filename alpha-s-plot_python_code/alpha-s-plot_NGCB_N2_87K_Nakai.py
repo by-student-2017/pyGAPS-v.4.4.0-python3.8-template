@@ -105,7 +105,7 @@ plt.legend()
 plt.title('alpha-s plot')
 plt.show()
 
-plt.title("alpha-s-plot (NGCB std., N2 87K, Nakai), ads", fontsize=18, fontname='Arial')
+plt.title("alpha-s-plot (NGCB std., N2 87K, Nakai), ads", fontsize=18, fontname='DejaVu Serif')
 fig.savefig('./plot/alpha-s-plot_NGCB_N2_87K_Nakai.jpg')
 
 print("***************************************************************************")

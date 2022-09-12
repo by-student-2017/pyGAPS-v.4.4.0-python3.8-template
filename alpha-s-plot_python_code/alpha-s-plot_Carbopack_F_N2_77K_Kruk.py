@@ -106,7 +106,7 @@ plt.legend()
 plt.title('alpha-s plot')
 plt.show()
 
-plt.title("alpha-s-plot (Carbopack F (GCB std), N2 77K, Kruk), ads", fontsize=18, fontname='Arial')
+plt.title("alpha-s-plot (Carbopack F (GCB std), N2 77K, Kruk), ads", fontsize=18, fontname='DejaVu Serif')
 fig.savefig('./plot/alpha-s-plot_Carbopack_F_N2_77K_Kruk.jpg')
 
 print("***************************************************************************")
