@@ -96,7 +96,7 @@ print("total ds: %7.2f [m2/g] (super-micropore*1.5)" % (ndfds[ndata-1,6]+supermi
 print("***************************************************************************************************")
 #
 text  = "***************************************************************************************************\n"
-text += "NLDFT (carbon slit model), DES) \n"
+text += "NLDFT (carbon slit model), ADS) \n"
 text += "\n"
 text += "specific surface area and volume\n"
 text += "ultra-micropore: "+"{:.2f}".format(ultramicropore_s)+" [m2/g], "+"{:.2f}".format(ultramicropore_v)+" [cm3/g] (w < 0.7 nm) \n"
