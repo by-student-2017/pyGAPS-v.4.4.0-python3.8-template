@@ -65,4 +65,4 @@ ndf.columns = ['pore_widths_nm', 'pore_distribution', 'pore_volume_cumulative_cm
 # output window and excel file
 import pprint
 pprint.pprint(ndf)
-ndf.to_csv("result_dft_ads.csv", index=False)
+ndf.to_csv("H2_77K_1nm.csv", index=False)

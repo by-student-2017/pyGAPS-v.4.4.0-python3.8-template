@@ -150,7 +150,7 @@ h2, l2 = ax2.get_legend_handles_labels()
 ax1.legend(h1+h2, l1+l2, loc='center right')
 #
 plt.title("PSD plot NLDFT (carbon slit), DES", fontsize=18, fontname='DejaVu Serif')
-fig.savefig('./plot/NLDFT_deltaS_DES.jpg')
+fig.savefig('./plot/H2_77K_1nm_deltaS_DES.jpg')
 #plt.show()
 
 # set name of columns
@@ -160,4 +160,4 @@ ndf.columns = ['pore_widths_nm', 'pore_distribution', 'pore_volume_cumulative_cm
 # output window and excel file
 #import pprint
 #pprint.pprint(ndf)
-ndf.to_csv("./plot/result_dft_des.csv", index=False)
+ndf.to_csv("./plot/H2_77K_1nm_DES.csv", index=False)
