@@ -14,17 +14,17 @@ result_dict_dft = pgc.psd_dft(
     isotherm,
     #kernel='DFT-N2-77K-carbon-slit',
     #kernel='./NLDFT-H2-77K-carbon-slit_2006.csv',
-    #kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_1nm_2006.csv',
-    kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_2nm_2006.csv',
+    kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_1nm_2006.csv',
+    #kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_2nm_2006.csv',
     #branch='des',
     #bspline_order=5,
     verbose=True)
 
 # plot
 fig1 = plt.figure(1)
-fig1.savefig('./plot/H2_77K_2nm_Fit.jpg')
+fig1.savefig('./plot/H2_77K_1nm_Fit.jpg')
 fig2 = plt.figure(2)
-fig2.savefig('./plot/H2_77K_2nm_PSD.jpg')
+fig2.savefig('./plot/H2_77K_1nm_PSD.jpg')
 #plt.show()
 
 #import pprint
