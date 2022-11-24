@@ -2,7 +2,7 @@
 H2: P0 = 1 atm = 101325 Pa
   I have confirmed that the kernel is the same for "ADS" and "DES".
 ------------------------------------------------------------------
-H2: P0 = 100 atm = 10132500 Pa
+H2: P0 = 1 atm = 101325 Pa
 NLDFT-H2-298K-carbon-slit_2nm_2006_v2.csv
   I have confirmed that the kernel is the same for "ADS" and "DES".
 ------------------------------------------------------------------
