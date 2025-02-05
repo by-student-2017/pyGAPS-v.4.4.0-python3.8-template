@@ -4,14 +4,15 @@
 ## tested with Ubumtu 20.04 LTS or Ubumtu 22.04 LTS (on Windows 10).
 
 
-## Install (miniconda)
+## Install (miniconda3)
 1. cd ~
 2. conda create -n pygaps-4.4.0 python=3.8
 3. conda activate pygaps-4.4.0
-4. git clone https://github.com/by-student-2017/pyGAPS-v.4.4.0-python3.8-template.git
-5. cd ~/pyGAPS-v.4.4.0-python3.8-template
-6.  chmod +x run.sh
-7.  chmod +x run_sequential.sh
+4. pip3 install pandas==1.3.5
+5. git clone https://github.com/by-student-2017/pyGAPS-v.4.4.0-python3.8-template.git
+6. cd ~/pyGAPS-v.4.4.0-python3.8-template
+7.  chmod +x run.sh
+8.  chmod +x run_sequential.sh
 
 
 ## Install
