@@ -23,6 +23,7 @@ result_dict_dft = pgc.psd_dft(
     kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006.csv',
     #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_002step.csv',
     #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_from_1e-5kPa.csv',
+    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_3nm_2006.csv',
     #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_5nm_2006.csv',
     #branch='des',
     #bspline_order=5,
