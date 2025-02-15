@@ -4,9 +4,7 @@ import matplotlib.pyplot as plt
 
 # create the path
 path = r'case.csv'
-#path = r'case._pp0_cm3STP.csv'
-#path = r'case._bar_cm3STP.csv'
-#path = r'case._bar.csv'
+#path = r'case_cm3STP.csv'
 
 # 1 cm3 = 0.001 L, H2 0.08988 g/L
 # cm3(STP)/g * 0.001 * 0.08988  -> g/g
@@ -22,8 +20,9 @@ result_dict_dft = pgc.psd_dft(
     #kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_1nm_2006.csv',
     #kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_2nm_2006.csv',
     #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_1nm_2006.csv',
-    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006.csv', # better
-    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_v2.csv',
+    kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006.csv',
+    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_002step.csv',
+    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_from_1e-5kPa.csv',
     #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_5nm_2006.csv',
     #branch='des',
     #bspline_order=5,
