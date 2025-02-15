@@ -4,9 +4,7 @@ import matplotlib.pyplot as plt
 
 # create the path
 path = r'case.csv'
-#path = r'case_pp0_cm3STP.csv'
-#path = r'case_bar_cm3STP.csv'
-#path = r'case_bar.csv'
+#path = r'case_cm3STP.csv'
 
 # 1 cm3 = 0.001 L, H2 0.08988 g/L
 # cm3(STP)/g * 0.001 * 0.08988  -> g/g
@@ -19,7 +17,6 @@ result_dict_dft = pgc.psd_dft(
     isotherm,
     #kernel='DFT-N2-77K-carbon-slit',
     kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006.csv',
-    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_v3.csv',
     #branch='des',
     #bspline_order=5,
     verbose=True)
