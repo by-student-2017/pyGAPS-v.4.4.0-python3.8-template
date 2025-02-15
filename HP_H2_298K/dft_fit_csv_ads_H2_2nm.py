@@ -18,12 +18,8 @@ isotherm = pgp.isotherm_from_csv(path)
 result_dict_dft = pgc.psd_dft(
     isotherm,
     #kernel='DFT-N2-77K-carbon-slit',
-    #kernel='./NLDFT-H2-77K-carbon-slit_2006.csv',
-    #kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_1nm_2006.csv',
-    #kernel='./kernel/H2_77K/NLDFT-H2-77K-carbon-slit_2nm_2006.csv',
-    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_1nm_2006.csv',
     kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006.csv',
-    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_5nm_2006.csv',
+    #kernel='./kernel/H2_298K/NLDFT-H2-298K-carbon-slit_2nm_2006_v3.csv',
     #branch='des',
     #bspline_order=5,
     verbose=True)
