@@ -11,7 +11,7 @@ type,calorimetry
 project,ACRONYM
 iso_type,Isotherme
 is_real,TRUE
-pressure_unit,atm
+pressure_unit,kPa
 pressure_mode,relative
 loading_basis,mass
 loading_unit,g
